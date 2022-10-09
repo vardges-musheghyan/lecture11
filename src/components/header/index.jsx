@@ -1,19 +1,20 @@
-function Header(){
+function Header({ allChecked, handleToggle, handleDelete }){
 
-    const handleSelectAllChange = (e) => {
-        console.log(e, 'EVENT')
-    }
+
+
+
     return (
         <div className="Header">
 
             <label htmlFor="selectInput">
-                <span> Select </span>
-                <input onChange={handleSelectAllChange}
+                <span>  { allChecked ? 'Unselect' : 'Select' } All </span>
+                <input onChange={handleToggle}
                        id="selectInput"
+                       checked={allChecked}
                        type="checkbox"/>
             </label>
 
-            <button> Delete </button>
+            <button onClick={handleDelete} > Delete { allChecked ? 'All': 'Selected' } </button>
 
         </div>
     )

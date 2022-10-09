@@ -7,7 +7,9 @@ function Card( { src, checked, onCheckChange } ){
             <img
                 className="CardImage"
                 src={src} />
-            <input onChange={onCheckChange} checked={checked} className="CardInput" type="checkbox"/>
+            <input onChange={onCheckChange}
+                   checked={checked}
+                   className="CardInput" type="checkbox"/>
         </div>
     )
 

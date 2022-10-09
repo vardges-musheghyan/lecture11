@@ -43,3 +43,12 @@
   padding: 20px;
   text-align: center;
 }
+
+.imagesContainer{
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: 400px;
+  overflow: auto;
+}

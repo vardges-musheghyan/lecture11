@@ -1,17 +1,17 @@
 import './styles.css';
 
 
-function Uploader({ changeImageSrc }){
+function Uploader({ addUploadedFiles }){
 
     const handleFileInputChange = (e) => {
 
         const { files } = e.target;
 
-        const [ file ] = files;
+        const filesArr = Array.from(files);
 
-        if (file){
-            changeImageSrc(URL.createObjectURL(file));
-        }
+        addUploadedFiles(filesArr);
+
+        e.target.value = null;
 
     }
 
@@ -21,6 +21,7 @@ function Uploader({ changeImageSrc }){
                 accept="image/jpeg, image/png"
                    onChange={handleFileInputChange}
                    type="file"
+                    multiple
             />
         </>
     )
