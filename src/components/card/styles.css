@@ -1,0 +1,22 @@
+.CardImage{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px ;
+}
+
+
+.CardContainer{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.CardInput{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+}
+
+
+
