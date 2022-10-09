@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import Card from "./components/card";
+import Uploader from "./components/uploader";
+import {useState} from "react";
+import Header from "./components/header";
 
 function App() {
+
+
+    const [imageSrc, setImageSrc] = useState('');
+
+    const changeImagEScr = (src) => {
+        setImageSrc(src);
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+          <div className="UploaderWrapper" >
+              <Uploader changeImageSrc={changeImagEScr}  />
+          </div>
+
+          <Header  />
+      <Card src={imageSrc} />
+      </>
   );
 }
 
